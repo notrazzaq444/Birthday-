@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/hbd.png">
+    <title>Happy Birthday Arfa!!</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
+        }
+
+        .bg {
+            background-image: url(./img/background.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #FEC0CD;
+            height: 100%;
+        }
+
+        .img {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 20px;
+            margin-bottom: 30px;
+            width: 350px;
+        }
+
+        #tap {
+            display: inline-block;
+        }
+
+        .foto {
+            width: 80%;
+            max-width: 400px;
+            min-width: 300px;
+            margin-top: 100px;
+            display: inline-block;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+        @import url(https://fonts.googleapis.com/css?family=Handlee);
+
+        .paper {
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            min-width: 300px;
+            height: 540px;
+            margin: 50px auto;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+
+        .paper:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 5px;
+            width: 45px;
+            background: radial-gradient(#616161 6px, transparent 7px) repeat-y;
+            background-size: 30px 30px;
+            border-right: 3px solid #D44147;
+            box-sizing: border-box;
+        }
+
+        .paper-content {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            bottom: 30px;
+            left: 50px;
+            background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
+            background-size: 30px 30px;
+        }
+
+        .paper-content .text1 {
+            text-align: left;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            max-height: 100%;
+            line-height: 30px;
+            padding: 0 10px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: #3f3f44;
+            font-family: 'Handlee', cursive;
+            font-size: 18px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .kotak {
+            position: relative;
+            width: 90%;
+            max-width: 550px;
+            min-width: 200px;
+            max-height: 350px;
+            min-height: 100px;
+            top: 300px;
+            padding: 20px 0;
+            display: inline-block;
+            background: #fafaf7;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+
+        .btn {
+            border-radius: 40px;
+        }
+
+        #slideLima {
+            position: relative;
+            top: 300px;
+        }
+
+        #trims {
+            position: relative;
+            top: 300px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-weight: normal;
+        }
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+            list-style-type: none;
+            position: relative;
+            left: -20px;
+            margin-top: 10px;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        li span {
+            display: block;
+            font-size: 24px;
+        }
+
+        body {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .container {
+            color: #333;
+            position: relative;
+            top: 250px;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Cake Button */
+        #cakeBox {
+            position: relative;
+            top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="background-music" src="./music/perfect.mp3" preload="auto"></audio>
+
+    <div class="bg" id="content">
+
+        <div class="container" id="timer">
+            <h5>Countdown to <x id='name'></x> birthday :</h5>
+            <ul>
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+            </ul>
+        </div>
+
+        <div id="slideSatu" class="animate__animated animate__slideInDown animate__slow d-none">
+            <img src="./img/hbd2.png" class="img">
+        </div>
+
+        <div id="slideDua" class="slides d-none paper animate__zoomInDown animate__animated animate__delay-2s animate__slow">
+            <div class="paper-content">
+                <p id="text1" class="text1"></p>
+            </div>
+        </div>
+
+        <div id="slideTiga" class="slides d-none paper animate__fadeInRight animate__animated">
+            <div class="paper-content">
+                <p id="text2" class="text1"></p>
+            </div>
+        </div>
+
+        <div class="kotak d-none slides animate__animated animate__fadeInDown animate__delay-2s" id="slideEmpat">
+            <div class="row">
+                <div class="col-sm mt-1">
+                    <h5>Do You Like It Or Not?🤌</h5>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-4 offset-2">
+                    <button id="yes" class="btn btn-outline-danger"> No! </button>
+                </div>
+                <div class="col-4">
+                    <button id="No" class="btn btn-outline-info"> Yes!! </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slideLima" class="d-none animate__bounceIn animate__animated animate__slow">
+            <i class="fas fa-heart fa-5x text-danger"></i>
+        </div>
+        <p id="trims" class="text-muted d-none mt-2"></p>
+
+        <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">Click Karo Happy Birthday Pe Moti</p>
+  <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">Click Karo Next page ke liye..</p>
+  <p id="tap" class="d-none animate__animated animate__pulse text-muted animate__slow animate__repeat-3">dubara click kro..🥲</p>
+
+        <div id="cakeBox" class="d-none animate__animated animate__fadeIn mt-3">
+            <button id="cakeBtn" class="btn btn-outline-danger btn-lg">Wants to cut cake?</button>
+        </div>
+
+        <footer class="page-footer font-small blue fixed-bottom"></footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/61e5120832.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+
+    <script>
+        // Play background music
+        function playMusic() {
+            const music = document.getElementById('background-music');
+            music.play();
+        }
+        window.addEventListener('DOMContentLoaded', playMusic);
+        document.body.addEventListener('click', playMusic, {
+            once: true
+        });
+
+        const timer = document.getElementById('timer');
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        // Countdown
+        let countDown = new Date('jan 12, 2026 00:00:00').getTime();
+        const x = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countDown - now;
+
+            document.getElementById('days').innerText = Math.floor(distance / day);
+            document.getElementById('hours').innerText = Math.floor((distance % day) / hour);
+            document.getElementById('minutes').innerText = Math.floor((distance % hour) / minute);
+            document.getElementById('seconds').innerText = Math.floor((distance % minute) / second);
+
+            if (distance < 0) {
+                clearInterval(x);
+                timer.classList.add('d-none');
+                confetti();
+                _slideSatu();
+            }
+        }, 1000);
+
+        // Slide functions
+        const _slideSatu = () => {
+            const tap = document.getElementById('tap');
+            const slideSatu = document.getElementById('slideSatu');
+            slideSatu.classList.remove('d-none');
+            setTimeout(() => {
+                tap.classList.remove('d-none');
+                document.body.addEventListener('click', _slideDua, {
+                    once: true
+                });
+            }, 7000);
+        };
+
+        const _slideDua = () => {
+            const slideSatu = document.getElementById('slideSatu');
+            const tap = document.getElementById('tap');
+            const slideDua = document.getElementById('slideDua');
+
+            setTimeout(() => {
+                slideSatu.classList.replace('animate__slideInDown', 'animate__backOutDown');
+                tap.classList.add('d-none');
+                setTimeout(() => slideSatu.classList.add('d-none'), 1000);
+            }, 1000);
+
+            slideDua.classList.remove('d-none');
+            setTimeout(() => {
+                tap.classList.remove('d-none');
+                document.body.addEventListener('click', () => {
+                    slideDua.classList.replace('animate__zoomInDown', 'animate__fadeOutLeft');
+                    slideDua.classList.remove('animate__delay-2s', 'animate__slow');
+                    tap.classList.add('d-none');
+                    setTimeout(() => {
+                        slideDua.remove();
+                        _slideTiga();
+                    }, 1000);
+                }, {
+                    once: true
+                });
+            }, 40000);
+        };
+
+        const _slideTiga = () => {
+            const tap = document.getElementById('tap');
+            const slideTiga = document.getElementById('slideTiga');
+
+            slideTiga.classList.remove('d-none');
+            setTimeout(() => {
+                tap.classList.remove('d-none');
+                document.body.addEventListener('click', () => {
+                    slideTiga.classList.remove('animate__delay-2s', 'animate__slow');
+                    slideTiga.classList.replace('animate__fadeInRight', 'animate__fadeOut');
+                    tap.remove();
+                    setTimeout(() => {
+                        slideTiga.remove();
+                        _slideEmpat();
+                    }, 1000);
+                }, {
+                    once: true
+                });
+            }, 43000);
+        };
+
+        function getRandomPosition(element) {
+            const x = document.body.offsetHeight - element.clientHeight;
+            const y = document.body.offsetWidth - element.clientWidth;
+            const randomX = Math.floor(Math.random() * 500);
+            const randomY = Math.floor(Math.random() * y);
+            return [randomX, randomY];
+        }
+
+        const _slideEmpat = () => {
+            const slideEmpat = document.getElementById('slideEmpat');
+            const btn = [document.getElementById('yes'), document.getElementById('No')];
+            slideEmpat.classList.remove('d-none');
+
+            btn[0].addEventListener('click', () => {
+                const xy = getRandomPosition(slideEmpat);
+                slideEmpat.style.top = xy[0] + 'px';
+            });
+
+            btn[1].addEventListener('click', () => {
+                slideEmpat.classList.replace('animate__fadeInDown', 'animate__bounceOut');
+                slideEmpat.classList.remove('animate__delay-2s');
+                setTimeout(() => {
+                    slideEmpat.remove();
+                    setTimeout(_slideLima, 500);
+                }, 1000);
+            });
+        };
+
+        const _slideLima = () => {
+            const slideLima = document.getElementById('slideLima');
+            const trims = document.getElementById('trims');
+            slideLima.classList.remove('d-none');
+
+            setTimeout(() => trims.classList.remove('d-none'), 1000);
+
+            slideLima.addEventListener('animationend', () => {
+                slideLima.classList.add('animate__delay-3s');
+                slideLima.classList.replace('animate__bounceIn', 'animate__fadeOut');
+                trims.classList.add('animate__animated', 'animate__fadeOut', 'animate__delay-3s');
+                setTimeout(() => {
+                    trims.remove();
+                    setTimeout(() => {
+                        slideLima.remove();
+                        showCakeButton();
+                    }, 1000);
+                }, 6000);
+            });
+        };
+
+        // TypeIt messages
+        new TypeIt("#text1", {
+            strings: [
+                "You Are Very Special To Me Moto, Happy Birthday to the reason my bad days get better.",
+                "You're not just special today, you're special every single day.",
+                "Lucky me, I get to call you mine. Happy Birthday Arfa.",
+                "You're my peace, my strength, my forever.",
+                "I don't even know how to put it into words, but I love you more than I ever thought I could... You're the one I want to spend my whole life with, laughing, loving, and just being together.",
+                "We may run out of things to talk about, but I could spend forever just being with you, saying nothing at all and still feeling everything."
+            ],
+            startDelay: 1,
+            speed: 50,
+            waitUntilVisible: true
+        }).go();
+
+        new TypeIt("#text2", {
+            strings: [
+                "I don't know if I'm special to you or not, but you're very special to me.",
+                "Without you, my life feels incomplete.",
+                "You came into my life when I had no one., And now I will stay with you until my last breath.",
+                "In Sha Allah..",
+                "- ᴀɴʏᴡᴀʏs, ʜᴀᴘᴘʏ ʙɪʀᴛʜᴅᴀʏ ᴅᴜᴍʙᴏ!"
+            ],
+            startDelay: 1,
+            speed: 50,
+            waitUntilVisible: true
+        }).go();
+
+        new TypeIt("#trims", {
+            strings: ["hehe 😁🤧🤭"],
+            startDelay: 1,
+            speed: 150,
+            loop: false,
+            waitUntilVisible: true,
+        }).go();
+
+        // Confetti function
+        function confetti() {
+            const $window = $(window),
+                random = Math.random,
+                cos = Math.cos,
+                sin = Math.sin,
+                PI = Math.PI,
+                PI2 = PI * 2;
+            let confettiArray = [];
+            let container = document.createElement('div');
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '0';
+            container.style.overflow = 'visible';
+            container.style.zIndex = '9999';
+            document.body.appendChild(container);
+
+            const particles = 150;
+            const colorThemes = ['#FF595E', '#FFCA3A', '#8AC926', '#1982C4', '#6A4C93'];
+
+            function createConfetto() {
+                const div = document.createElement('div');
+                div.style.position = 'absolute';
+                div.style.width = div.style.height = Math.floor(5 + 12 * random()) + 'px';
+                div.style.backgroundColor = colorThemes[Math.floor(random() * colorThemes.length)];
+                div.style.left = random() * window.innerWidth + 'px';
+                div.style.top = -10 + 'px';
+                div.style.borderRadius = '50%';
+                container.appendChild(div);
+
+                const speed = 2 + random() * 3;
+                const fall = () => {
+                    let top = parseFloat(div.style.top);
+                    if (top < window.innerHeight) {
+                        div.style.top = top + speed + 'px';
+                        requestAnimationFrame(fall);
+                    } else {
+                        div.remove();
+                    }
+                };
+                fall();
+            }
+
+            for (let i = 0; i < particles; i++) createConfetto();
+        }
+
+        // Cake button
+        function showCakeButton() {
+            const cakeBox = document.getElementById('cakeBox');
+            cakeBox.classList.remove('d-none');
+            document.getElementById('cakeBtn').addEventListener('click', () => {
+                window.open('https://bdaycake.com/razzaq_8781', '_blank');
+            });
+        }
+    </script>
+</body>
+
+</html>
